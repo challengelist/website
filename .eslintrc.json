@@ -1,0 +1,104 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    // .ts
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "eqeqeq": [
+      "error",
+      "always"
+    ],
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "import/newline-after-import": "error",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          "internal",
+          "parent",
+          "sibling"
+        ],
+        "newlines-between": "never"
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/mouse-events-have-key-events": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.tsx"
+      ],
+      "rules": {
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "jsx-a11y/aria-role": [
+          "error",
+          {
+            "ignoreNonDOM": true
+          }
+        ],
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-tabindex": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "react/display-name": "off",
+        "react/no-unescaped-entities": [
+          "error",
+          {
+            "forbid": [
+              ">",
+              "}"
+            ]
+          }
+        ],
+        "react/no-unknown-property": "off"
+      }
+    }
+  ],
+  "settings": {
+    "linkComponents": [
+      {
+        "name": "NavLink",
+        "linkAttribute": "to"
+      },
+      {
+        "name": "Link",
+        "linkAttribute": "to"
+      }
+    ]
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "static/"
+  ]
+}
