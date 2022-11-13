@@ -1,0 +1,13 @@
+:root {
+    --base-hue: 220;
+    --max-width: 1200px;
+    --top-margin: 48px;
+    --corner-radius: 3px;
+
+    --font-base: "Inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@import "utils/reset.scss";
+@import "utils/colorPalette.scss";
+@import "fonts.scss";
+@import "index.scss";

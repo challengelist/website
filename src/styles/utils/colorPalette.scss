@@ -1,0 +1,28 @@
+:root {
+    $base-colours: (
+        bg: (20%, 5%),
+        accent: (100%, 50%),
+
+        dark10: (10%, 10%),
+        dark15: (10%, 15%),
+        dark20: (15%, 20%),
+        dark25: (15%, 25%),
+        dark30: (15%, 30%),
+        dark35: (15%, 35%),
+        dark40: (15%, 35%),
+
+        light100: (10%, 100%),
+        light95: (10%, 95%),
+        light90: (10%, 90%),
+        light85: (10%, 85%),
+        light80: (15%, 80%),
+        light75: (15%, 75%),
+        light70: (15%, 70%),
+        light65: (15%, 65%),
+        light60: (15%, 60%),
+    );
+
+    @each $name, $value in $base-colours {
+        --hsl-#{$name}: hsl(var(--base-hue), #{nth($value, 1)}, #{nth($value, 2)});
+    }
+}

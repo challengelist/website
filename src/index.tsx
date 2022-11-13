@@ -1,6 +1,10 @@
 /* @refresh reload */
 import { render } from "solid-js/web";
-import "./index.css";
+import "./styles/app.scss";
 import App from "./App";
 
-render(() => <App/>, document.getElementById("root") as HTMLElement);
+render(() => <>
+    <div>
+        sup nerd
+    </div>
+</>, document.getElementById("root") as HTMLElement);
