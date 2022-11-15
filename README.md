@@ -1,34 +1,25 @@
-## Usage
+<div align="center">
+  <img src="https://cdn.discordapp.com/attachments/234057206784458754/1042019573983096882/logo.png" />
+  <p>
+    The next generation of the Challenge List website, made to suit the lively purposes of a growing community.
+  <hr />
+</div>
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+Welcome to the repository of the Challenge List Website! This is the core frontend of the actual website, and is where everything within it functions. Generally, this frontend is made *specifically* for the Challenge List, but you can use it for your own purposes if you'd like within the confines of what we (the Challenge List developers) allow you to do outside of the bounds of the current license. While we appreciate contributors and pull requests, we will not accept any requests that are not related to the Challenge List itself.
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+## Requirements
+* Node.js v17.x or higher
+* TypeScript v4.8.x or higher
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+## Contributions
+All contributions and pull requsts are appreciated and welcome, but aspects of the Website are already designed with features in mind in proportion to the original Pointercrate backend. If you wish to work on new features or changes, please open an issue on our GitHub repository first to discuss the changes you wish to make and we will happily give you what is necessary to handle the addition of the feature.
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+### Support
 
-## Available Scripts
+All support for the Website is handled here on GitHub. If you have any questions, please open an issue and we will get back to you as soon as possible.
 
-In the project directory, you can run:
+## License
 
-### `npm dev` or `npm start`
+challengelist/website is licensed under the AGPL-3.0 license. Please see the license file for more information. Simply put, you are free to use this software for any purpose, but you must disclose any changes you make to the source code and release them under the same license. This however does not include branding or other assets that are not part of the source code; such as Challenge List logos, icons, etc.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+[tl;dr](https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0))
