@@ -1,0 +1,26 @@
+.avatar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &--front {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        border-radius: var(--corner-radius);
+    }
+
+    &--blur {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: var(--corner-radius);
+        filter: blur(7px);
+        opacity: .5;
+        bottom: -5px;
+        scale: 80%;
+    }
+}
