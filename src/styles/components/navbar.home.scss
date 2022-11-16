@@ -7,6 +7,7 @@
   &--content-left-buttons-button {
     color: white;
     opacity: 0.5;
+    transition: color 0.25s, opacity 0.25s;
 
     &:hover {
       background: rgba(255, 255, 255, 0.1);
@@ -16,6 +17,15 @@
 
   &--home-default {
     background: var(--hsl-dark10);
+
+    .navbar--content-left-buttons-button {
+      color: var(--hsl-dark40);
+      opacity: 1;
+
+      &:hover {
+        background: var(--hsl-dark15);
+      }
+    }
   }
 
   &:before {
