@@ -25,6 +25,10 @@ export function Navbar() {
         setNavbarPage(windowPage);
     }
 
+    if (navbarPage() === "/") {
+        import("../styles/components/navbar.home.scss");
+    }
+
     return <div class="navbar">
         <div class="navbar--content">
             <NavbarPageContext.Provider value={navbarPage()}>
