@@ -27,9 +27,21 @@ export function Navbar() {
 
     if (navbarPage() === "/") {
         import("../styles/components/navbar.home.scss");
+
+        setTimeout(() => {
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    nav?.classList.add("navbar--home-default");
+                } else {
+                    nav?.classList.remove("navbar--home-default");
+                }
+            });
+        });
     }
 
-    return <div class="navbar">
+    let nav: HTMLDivElement | undefined;
+
+    return <div ref={nav} class="navbar">
         <div class="navbar--content">
             <NavbarPageContext.Provider value={navbarPage()}>
                 <div class="navbar--content-left">

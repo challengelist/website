@@ -1,7 +1,8 @@
 .navbar {
-  position: relative;
+  position: sticky;
+  top: 0;
   background: transparent;
-  z-index: 1;
+  transition: background-color 0.25s;
 
   &--content-left-buttons-button {
     color: white;
@@ -13,6 +14,10 @@
     }
   }
 
+  &--home-default {
+    background: var(--hsl-dark10);
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -20,8 +25,13 @@
     height: 300px;
     left: 0;
     top: 0;
+    pointer-events: none;
 
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
     z-index: -1;
+  }
+
+  &--home-default.navbar:before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
   }
 }

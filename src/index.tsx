@@ -10,11 +10,13 @@ const { HomePage } = lazily(() => import("./pages/HomePage"));
 const { NonExisting } = lazily(() => import("./pages/NonExisting"));
 
 render(() => <AccountProvider>
-    <Router>
-        <Navbar/>
-        <Routes>
-            <Route path="/" component={HomePage} />
-            <Route path="*" component={NonExisting} />
-        </Routes>
-    </Router>
+    <div style="z-index: 9999; position: relative;">
+        <Router>
+            <Navbar/>
+            <Routes>
+                <Route path="/" component={HomePage} />
+                <Route path="*" component={NonExisting} />
+            </Routes>
+        </Router>
+    </div>
 </AccountProvider>, document.getElementById("root") as HTMLElement);
