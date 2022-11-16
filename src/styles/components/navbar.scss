@@ -47,6 +47,7 @@
           padding: 8px;
           border-radius: var(--corner-radius);
           color: var(--hsl-dark40);
+          transition: background-color 0.25s;
 
           &:hover {
             background: var(--hsl-dark15);
