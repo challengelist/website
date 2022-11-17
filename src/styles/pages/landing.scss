@@ -1,0 +1,85 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: calc(100% - 24px);
+    max-width: 500px;
+    height: 100%;
+  }
+
+  &--title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-title {
+      color: var(--hsl-light90);
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    &-description {
+      color: var(--hsl-dark40);
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+
+  &--input {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+
+    &-text {
+      flex: 1;
+      font: inherit;
+      font-size: 14px;
+      height: 32px;
+      border: none;
+      padding: 0 16px;
+      border-radius: var(--corner-radius);
+      background: var(--hsl-dark10);
+      color: var(--hsl-light60);
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-button {
+      font: inherit;
+      font-size: 14px;
+      height: 32px;
+      border: none;
+      padding: 0 16px;
+      border-radius: var(--corner-radius);
+      background: var(--hsl-accent);
+      box-shadow: var(--accent-shadow);
+      color: var(--hsl-light90);
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &--form {
+    color: var(--hsl-dark40);
+
+    a {
+      color: var(--hsl-light60);
+      font-weight: bold;
+    }
+  }
+}

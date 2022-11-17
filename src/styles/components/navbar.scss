@@ -56,7 +56,7 @@
           &-active {
             color: var(--hsl-light90);
             background: var(--hsl-accent);
-            box-shadow: 0 0 6px hsla(var(--base-hue), 100%, 50%, 0.02), 0 2px 4px hsla(var(--base-hue), 100%, 50%, 0.08);
+            box-shadow: var(--accent-shadow);
             font-weight: bold;
 
             &:hover {
