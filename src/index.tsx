@@ -12,7 +12,7 @@ const { NonExisting } = lazily(() => import("./pages/NonExisting"));
 
 render(() => {
     // todo: check if the user can access the site.
-    return <LandingPage/>;
+    //return <LandingPage/>;
 
     return <AccountProvider>
         <div style="z-index: 9999; position: relative;">
