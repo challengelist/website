@@ -1,5 +1,5 @@
 import anime from "animejs";
-import { createEffect, createSignal, For } from "solid-js";
+import { For, createEffect, createSignal } from "solid-js";
 import "../styles/pages/home.scss";
 import { InlineAccount } from "../components/InlineAccount";
 import { APIAccount } from "../structures/APIAccount";
@@ -64,12 +64,12 @@ function Staffs() {
             <div class="home--contents-staff-container-list">
                 <div class="home--contents-staff-list-accounts">
                     <For each={list()}>{acc =>
-                        <InlineAccount apiAccount={acc} />
+                        <InlineAccount apiAccount={acc} showRole />
                     }</For>
                 </div>
                 <div class="home--contents-staff-dev-accounts">
                     <For each={devs()}>{acc =>
-                        <InlineAccount apiAccount={acc}/>
+                        <InlineAccount apiAccount={acc} showRole />
                     }</For>
                 </div>
             </div>

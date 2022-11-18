@@ -2,10 +2,18 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 12px;
   height: 32px;
   width: fit-content;
+
+  &--group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
 
   &--avatar {
     height: 32px;
@@ -16,5 +24,10 @@
     color: var(--hsl-light90);
     font-weight: 400;
     font-size: 16px;
+  }
+
+  &--badge {
+    color: var(--hsl-dark40);
+    transition: color 0.25s;
   }
 }
