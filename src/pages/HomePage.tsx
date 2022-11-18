@@ -39,7 +39,7 @@ function VideoBackground() {
                 }
 
                 if (videoRef) {
-                    videoRef.addEventListener("play", () => {
+                    let playVideo = () => {
                         // Fade in the video.
                         anime({
                             targets: videoRef,
@@ -70,10 +70,17 @@ function VideoBackground() {
                                 }
                             });
                         }, ((totalLength ?? 0) * 1000) - 2500);
+                    };
+
+                    videoRef.addEventListener("play", () => {
+                        playVideo();
                     });
+
+                    // also play here on page refresh.
+                    playVideo();
                 }
             });
         });
 
-    return <video ref={videoRef} src="/src/assets/videos/funny.mp4" autoplay={true} loop={true} muted={true}></video>;
+    return <video ref={videoRef} src="/src/assets/videos/funny.mp4" autoplay={true} loop={true} muted={true} />;
 }
