@@ -1,0 +1,20 @@
+.inline_account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 32px;
+  width: fit-content;
+
+  &--avatar {
+    height: 32px;
+    width: 32px;
+  }
+
+  &--username {
+    color: var(--hsl-light90);
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
