@@ -1,8 +1,9 @@
+import { APIBadge } from "./APIBadge";
 import { APIGroup } from "./APIGroup";
 
 export interface APIAccount {
     id: number;
-    badges: any[];
+    badges: APIBadge[];
     created_at: Date;
     updated_at: Date;
     flags: number;
