@@ -1,14 +1,11 @@
 import anime from "animejs";
 import { createEffect, createSignal } from "solid-js";
-import { useAccount } from "../contexts/AccountContext";
 import "../styles/pages/home.scss";
 import { Util } from "../util/Util";
 
 export function HomePage() {
     let [ videoUrls, setVideoUrls ] = createSignal<string[]>([]);
-    let [ videoIndex, setVideoIndex ] = createSignal(0);
     let videoRef: HTMLVideoElement | undefined = undefined;
-    let account = useAccount();
 
     // Grab all the video elements from the API.
     fetch(`${import.meta.env.CL_API_URL}/videos`)
@@ -16,49 +13,48 @@ export function HomePage() {
         .then(res => {
             // Set the video urls.
             setVideoUrls((res.data as string[]).map(url => `${import.meta.env.CL_API_URL}${url}`));
-        });
-            
 
-    createEffect(() => {
-        if (videoUrls().length == 0) {
-            return;
-        }
+            createEffect(() => {
+                if (videoUrls().length === 0) {
+                    return;
+                }
 
-        if (videoRef) {
-            videoRef.addEventListener("play", () => {
-                // Fade in the video.
-                anime({
-                    targets: videoRef,
-                    opacity: [0, 0.5],
-                    duration: 1000,
-                    easing: "easeInOutQuad" 
-                });
+                if (videoRef) {
+                    videoRef.addEventListener("play", () => {
+                        // Fade in the video.
+                        anime({
+                            targets: videoRef,
+                            opacity: [0, 0.5],
+                            duration: 1000,
+                            easing: "easeInOutQuad"
+                        });
 
-                console.log("PLAY");
-                // Calculate the total length of the video.
-                let totalLength = videoRef?.duration;
+                        console.log("PLAY");
+                        // Calculate the total length of the video.
+                        let totalLength = videoRef?.duration;
 
-                console.log(videoRef?.duration);
+                        console.log(videoRef?.duration);
 
-                setTimeout(() => {
-                    // Fade out the video.
-                    anime({
-                        targets: videoRef,
-                        opacity: 0,
-                        duration: 1000,
-                        easing: "easeInOutQuad",
-                        complete: () => {
-                            // Stop the video.
-                            videoRef?.pause();
-        
-                            // Set the new video source to a random video.
-                            videoRef!.src = videoUrls()[Util.getRandomInt(0, videoUrls().length - 1)];
-                        }
+                        setTimeout(() => {
+                            // Fade out the video.
+                            anime({
+                                targets: videoRef,
+                                opacity: 0,
+                                duration: 1000,
+                                easing: "easeInOutQuad",
+                                complete: () => {
+                                    // Stop the video.
+                                    videoRef?.pause();
+
+                                    // Set the new video source to a random video.
+                                    videoRef!.src = videoUrls()[Util.getRandomInt(0, videoUrls().length - 1)];
+                                }
+                            });
+                        }, ((totalLength ?? 0) * 1000) - 2500);
                     });
-                }, ((totalLength ?? 0) * 1000) - 2500);
-            })
-        }
-    });
+                }
+            });
+        });
 
     return <div class="home">
         <div class="home--video">
