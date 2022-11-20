@@ -1,0 +1,20 @@
+._labelled {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+
+  &:focus-within {
+    ._labelled--name {
+      color: var(--hsl-light60);
+    }
+  }
+
+  &--name {
+    color: var(--hsl-dark40);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    transition: color 0.25s;
+  }
+}
