@@ -7,7 +7,7 @@ export class Account {
     /**
      * Whether this account is logged in to use the {@link RestClient}.
      */
-    public loggedIn: boolean = true;
+    public loggedIn: boolean = false;
 
     /**
      * A {@link RestClient} used to access the Challenge List API.

@@ -11,6 +11,19 @@
 
     &:hover {
       background: rgba(255, 255, 255, 0.1);
+      color: white;
+      opacity: 1;
+    }
+  }
+
+  &--content-right-authenticate a {
+    color: white;
+    opacity: 0.5;
+    transition: color 0.25s, opacity 0.25s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
       opacity: 1;
     }
   }
@@ -24,6 +37,17 @@
 
       &:hover {
         background: var(--hsl-dark15);
+        color: var(--hsl-light60);
+      }
+    }
+
+    .navbar--content-right-authenticate a {
+      color: var(--hsl-dark40);
+      opacity: 1;
+
+      &:hover {
+        background: var(--hsl-dark15);
+        color: var(--hsl-light60);
       }
     }
   }

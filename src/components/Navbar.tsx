@@ -26,7 +26,7 @@ export function Navbar() {
     }
 
     if (navbarPage() === "/") {
-        import("../styles/components/navbar.home.scss");
+        import("../styles/pages/home/navbar.home.scss");
 
         setTimeout(() => {
             window.addEventListener("scroll", () => {
