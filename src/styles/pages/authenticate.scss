@@ -1,0 +1,71 @@
+.authenticate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 48px - 264px);
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: calc(100% - 24px);
+    max-width: 500px;
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 16px;
+
+      &-title {
+        color: var(--hsl-light90);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+      }
+
+      &-description {
+        color: var(--hsl-dark40);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        color: var(--hsl-light60);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      button {
+        font: inherit;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        border: none;
+        padding: 8px 16px;
+        color: var(--hsl-light90);
+        border-radius: var(--corner-radius);
+        background: var(--hsl-accent);
+        box-shadow: var(--accent-shadow);
+        cursor: pointer;
+
+        &:hover {
+          background: var(--hsl-accent);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

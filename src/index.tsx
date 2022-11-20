@@ -9,6 +9,7 @@ import { AccountProvider } from "./contexts/AccountContext";
 import { LandingPage } from "./pages/LandingPage";
 
 const { HomePage } = lazily(() => import("./pages/HomePage"));
+const { LogIn } = lazily(() => import("./pages/LogIn"));
 const { NonExisting } = lazily(() => import("./pages/NonExisting"));
 
 render(() => {
@@ -22,6 +23,7 @@ render(() => {
                 <div class="app">
                     <Routes>
                         <Route path="/" component={HomePage} />
+                        <Route path="/login" component={LogIn} />
                         <Route path="*" component={NonExisting} />
                     </Routes>
                 </div>
