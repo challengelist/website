@@ -3,6 +3,7 @@ import { Route, Router, Routes } from "@solidjs/router";
 import { render } from "solid-js/web";
 import { lazily } from "solidjs-lazily";
 import "./styles/app.scss";
+import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { AccountProvider } from "./contexts/AccountContext";
 import { LandingPage } from "./pages/LandingPage";
@@ -18,10 +19,13 @@ render(() => {
         <div style="z-index: 9999; position: relative;">
             <Router>
                 <Navbar/>
-                <Routes>
-                    <Route path="/" component={HomePage} />
-                    <Route path="*" component={NonExisting} />
-                </Routes>
+                <div class="app">
+                    <Routes>
+                        <Route path="/" component={HomePage} />
+                        <Route path="*" component={NonExisting} />
+                    </Routes>
+                </div>
+                <Footer />
             </Router>
         </div>
     </AccountProvider>;

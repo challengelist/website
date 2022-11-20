@@ -5,6 +5,10 @@ html, body {
     min-height: 100vh;
 }
 
+.app {
+    min-height: calc(100vh - 48px - 264px);
+}
+
 #root {
     min-height: 100vh;
 }
