@@ -96,6 +96,18 @@
             color: var(--hsl-light60);
           }
         }
+
+        &-active {
+          color: var(--hsl-light90) !important;
+          background: var(--hsl-accent);
+          box-shadow: var(--accent-shadow);
+          font-weight: bold;
+
+          &:hover {
+            background: var(--hsl-accent);
+            color: var(--hsl-light90) !important;
+          }
+        }
       }
     }
   }

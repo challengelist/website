@@ -56,8 +56,8 @@ export function Navbar() {
                     {account.loggedIn ? <div class="navbar--content-right-avatar">
                         <Avatar url="https://alten.s-ul.eu/muXCiSTJ.png" />
                     </div> : <div class="navbar--content-right-authenticate">
-                        <a href="/login">Sign In</a>
-                        <a href="/register">Register</a>
+                        <a class={navbarPage() === "/login" ? "navbar--content-right-authenticate-active" : ""} href="/login">Sign In</a>
+                        <a class={navbarPage() === "/register" ? "navbar--content-right-authenticate-active" : ""}  href="/register">Register</a>
                     </div>}
                 </div>
             </NavbarPageContext.Provider>
