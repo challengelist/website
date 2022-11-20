@@ -10,6 +10,7 @@ import { LandingPage } from "./pages/LandingPage";
 
 const { HomePage } = lazily(() => import("./pages/HomePage"));
 const { LogIn } = lazily(() => import("./pages/LogIn"));
+const { Register } = lazily(() => import("./pages/Register"));
 const { NonExisting } = lazily(() => import("./pages/NonExisting"));
 
 render(() => {
@@ -24,6 +25,7 @@ render(() => {
                     <Routes>
                         <Route path="/" component={HomePage} />
                         <Route path="/login" component={LogIn} />
+                        <Route path="/register" component={Register} />
                         <Route path="*" component={NonExisting} />
                     </Routes>
                 </div>
