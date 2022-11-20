@@ -1,4 +1,4 @@
-import { faChartPie, faFileLines, faRankingStar } from "@fortawesome/free-solid-svg-icons";
+import { faFileLines, faLineChart, faRankingStar } from "@fortawesome/free-solid-svg-icons";
 import { For, createContext, createSignal, useContext } from "solid-js";
 import { useAccount } from "../contexts/AccountContext";
 import { Avatar } from "./Avatar";
@@ -9,7 +9,7 @@ const NavbarPageContext = createContext();
 
 const pages: NavbarItemProperties[] = [
     { name: "Listing", path: "/listing", icon: faRankingStar },
-    { name: "Stats", path: "/stats", icon: faChartPie },
+    { name: "Leaderboards", path: "/leaderboards", icon: faLineChart },
     { name: "Guidelines", path: "/guidelines", icon: faFileLines },
 ];
 
