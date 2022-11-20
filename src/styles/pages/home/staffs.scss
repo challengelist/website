@@ -81,19 +81,4 @@
       }
     }
   }
-
-  &-dev {
-    align-items: flex-end;
-
-    &-title {
-      align-items: flex-end;
-      text-align: right;
-    }
-
-    &-accounts {
-      .inline_account {
-        flex-direction: row-reverse;
-      }
-    }
-  }
 }
