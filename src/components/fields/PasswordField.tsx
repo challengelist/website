@@ -1,8 +1,9 @@
+import { JSX } from "solid-js";
 import { LabelledField } from "./LabelledField";
 import "../../styles/components/fields/textField.scss";
 
-interface PasswordFieldProperties {
-    id: string;
+export interface PasswordFieldProperties {
+    onInput?: JSX.EventHandlerUnion<HTMLInputElement, InputEvent>
     name: string;
     placeholder?: string;
     lightness?: number;
