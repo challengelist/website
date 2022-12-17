@@ -1,24 +1,22 @@
 import { RestClient } from "../util/RestClient";
 import { APIAccount } from "./APIAccount";
-import { APIBadge } from "./APIBadge";
-import { APIGroup } from "./APIGroup";
 
 /**
  * A generic representation of a Challenge List account use for all site actions.
  */
-export class Account implements APIAccount {
-    badges!: APIBadge[];
-    created_at!: Date;
-    flags!: number;
-    groups!: APIGroup[];
-    id!: number;
-    permissions!: number;
-    profile!: string | null;
-    updated_at!: Date;
-    username!: string;
+export class Account {
+    /**
+     * An {@link APIAccount} that represents the user.
+     */
+    public apiAccount?: APIAccount;
 
     /**
-     * Whether this account is logged in to use the {@link RestClient}.
+     * The token to use in web requests if the user is {@link loggedIn}
+     */
+    public token?: string;
+
+    /**
+     * Whether this account is logged in to use the {@link RestClient}. If set to true, {@link apiAccount} should have data filled in to use.
      */
     public loggedIn: boolean = false;
 

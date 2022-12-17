@@ -11,7 +11,7 @@ export class RestClient {
     public request(url: string, request: RequestInit): Promise<any> {
         // eslint-disable-next-line no-async-promise-executor
         return new Promise(async (res, rej) => {
-           const response = await fetch(url, request);
+           const response = await fetch(`${import.meta.env.CL_API_URL}${url}`, request);
 
            // Handle status codes.
             if (response.status === 200) {
